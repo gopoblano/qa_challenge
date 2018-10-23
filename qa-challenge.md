@@ -1,3 +1,4 @@
+
 POSTMAN
 ===============
 Postman in my experience is a very versatile tool that I use each time I need to test APIs in my projects. It let me organize my test suites and the flow that every test needs to be executed in a way that I can even control the data flow using global or environment context for each cycle. 
@@ -26,6 +27,10 @@ Postman-Token: a888398c-2974-4035-f883-1912adae76db
   "email": "lordvader@thedarkside.com"
 }
 
+
+
+
+
 Test set and coverage for Testing of 3 scenarios according documentation.
 
 1. Happy path
@@ -52,26 +57,40 @@ Issue- According with the documentation of the API, the phone number must be man
 1.16 Negative testing with empty email
 1.17 Negative testing with invalid email
 
+
+
 As additional feature of this tool I add asserts to help me to validate the response and code returned by the API.
 
+
 2.0 Happy path with criminal record as response
+
+
+
 3.0 Happy path with unverified location
 
+
 Following with this analysis and design, and considering a similar number of parameters and testing (positive/negative) we obtain an approximate of 54 test cases.
-
-
 JSONEDITOR & JSONVIEWER
 =========================
+
 To examine probably the body or the response of your requests  it is neccesary to be helped for a tool that make the life eaiser to visualize the structure of this metadata. For me, among the variety of open tools that you can use, I choose this two to be practical and to visualize in a simple way the JSON format.
+
+
+
 
 
 RESTFULL STRESS
 ================
 
-Restful stress is a tool to help us to see in a simple way the performance of the API. 
 
+
+
+
+
+Restful stress is a tool to help us to see in a simple way the performance of the API. 
 GITHUB
 ===============
+
 After you creat a new account in github, it is necessary to sync your public gpg keys to gain access to the remote repository. In my case, the account was generated before so , for this step was not necessary to apply to me. It was only needed to create a new repo to upload all the new files generated as results of the testing effort for this challenge.
 
 After you created a new repo it is necessary to be pulled from the remote one to your local. For instance:
@@ -95,5 +114,99 @@ $ git branch
   
 $ git status
 On branch challenge
-nothing to commit, working directory clean
- 
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	qa-challenge.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+
+$ git status
+On branch challenge
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	new file:   qa-challenge.md
+
+$ git commit -m "Adding qa-challenge"
+[challenge 7d1bef5] Adding qa-challenge
+ 1 file changed, 99 insertions(+)
+ create mode 100644 qa-challenge.md
+
+$ git log
+commit 7d1bef58e0ae9f989d73879a028770b6950db8b6
+Author: Gerardo H <gerardo@gophernandez.com>
+Date:   Mon Oct 22 22:52:11 2018 -0500
+
+    Adding qa-challenge
+
+
+
+$ git branch
+* challenge
+  master
+
+$ git checkout master
+Switched to branch 'master'
+
+$ git merge --no-ff challenge
+Merge made by the 'recursive' strategy.
+ qa-challenge.md | 99 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 99 insertions(+)
+ create mode 100644 qa-challenge.md
+
+$ git log
+commit e34dfd99a7dde5a66634116535b0a8787dc18cf0
+Merge: 5da0932 7d1bef5
+Author: Gerardo H <gerardo@gophernandez.com>
+Date:   Mon Oct 22 22:53:14 2018 -0500
+
+    Merge branch 'challenge'
+
+commit 7d1bef58e0ae9f989d73879a028770b6950db8b6
+Author: Gerardo H <gerardo@gophernandez.com>
+Date:   Mon Oct 22 22:52:11 2018 -0500
+
+    Adding qa-challenge
+
+commit 5da09326a0ddd54982b86c559d3eb50dd4cb554d
+Author: Gerardo H <gerardo@gophernandez.com>
+Date:   Tue Oct 16 21:15:12 2018 -0500
+
+    Adding a first commit
+
+ $ git branch
+  challenge
+* master
+
+$ git push origin master
+X11 forwarding request failed on channel 0
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (7/7), 2.70 KiB | 0 bytes/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+remote: 
+remote: Create a pull request for 'master' on GitHub by visiting:
+remote:      https://github.com/gopoblano/qa_challenge/pull/new/master
+remote: 
+To git@github.com:gopoblano/qa_challenge.git
+* [new branch]      master -> master
+
+$ git checkout challenge 
+Switched to branch 'challenge'
+ubuntu@ubuntu-HP-ProBook-6470b ~/git/projects/qa_challenge $ git push origin challenge
+X11 forwarding request failed on channel 0
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'challenge' on GitHub by visiting:
+remote:      https://github.com/gopoblano/qa_challenge/pull/new/challenge
+remote: 
+To git@github.com:gopoblano/qa_challenge.git
+* [new branch]      challenge -> challenge
+
+
+
+
