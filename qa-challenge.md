@@ -78,14 +78,14 @@ Issue- According with the documentation of the API, the phone number must be man
 
 **Following with this analysis and design, and considering a similar number of parameters and testing (positive/negative) we obtain an approximate of 54 test cases.**
 
-##JSONEDITOR & JSONVIEWER
+## JSONEDITOR & JSONVIEWER
 
 To examine probably the body or the response of your requests  it is neccesary to be helped for a tool that make the life eaiser to visualize the structure of this metadata. For me, among the variety of open tools that you can use, I choose this two to be practical and to visualize in a simple way the JSON format.
 
-##RESTFULL STRESS
+## RESTFULL STRESS
 Restful stress is a tool to help us to see in a simple way the performance of the API. 
 
-##GITHUB
+## GITHUB
 After you creat a new account in github, it is necessary to sync your public gpg keys to gain access to the remote repository. In my case, the account was generated before so , for this step was not necessary to apply to me. It was only needed to create a new repo to upload all the new files generated as results of the testing effort for this challenge.
 
 After you created a new repo it is necessary to be pulled from the remote one to your local. For instance:
